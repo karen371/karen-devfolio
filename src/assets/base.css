@@ -1,0 +1,49 @@
+/* Paleta de colores vibrantes pero sofisticados */
+:root {
+  --vt-c-white: #ffffff;
+  --vt-c-white-soft: #f5f5f5;
+  --vt-c-white-mute: #f0f0f0;
+
+  --vt-c-black: #1a1a1a;
+  --vt-c-black-soft: #2c2c2c;
+
+  --vt-c-light-pink: #f4f1f4;  
+  --vt-c-soft-blue: #9db3e6;   
+  --vt-c-deep-blue: #003b5c;  
+  --vt-c-pale-blue: #b4c6e7;   
+  --vt-c-dark-purple: #9b58b0; 
+  --vt-c-soft-pink: #F6A5B2;   
+  --vt-c-light-purple: #c88fd4;
+  --vt-c-light-pink2: #F9B8CA;  /* Tono más claro de rosa suave */
+
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.25);  /* Divider suave */
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.1);   /* Divider muy suave */
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.35);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.25);
+
+  --vt-c-text-light-1: var(--vt-c-sapphire);
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.7);
+  --vt-c-text-dark-1: var(--vt-c-white);
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.75);
+}
+
+/* Variables semánticas para el proyecto */
+:root {
+  --color-background: var(--vt-c-white); /* Fondo blanco */
+  --color-background-soft: var(--vt-c-white-soft); /* Fondo suave */
+  --color-background-mute: var(--vt-c-white-mute); /* Fondo muy suave */
+
+  --color-border: var(--vt-c-divider-light-2); /* Borde suave */
+  --color-border-hover: var(--vt-c-divider-light-1); /* Borde visible en hover */
+
+  --color-heading: var(--vt-c-text-light-1); /* Título en color azul sofisticado */
+  --color-text: var(--vt-c-text-light-2); /* Texto suave pero legible */
+
+  --color-btn-primary: var(--vt-c-teal); /* Botón primario teal elegante */
+  --color-btn-secondary: var(--vt-c-coral); /* Botón secundario coral suave */
+
+  --section-gap: 160px;
+}
+
+
