@@ -15,5 +15,5 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
-  base: 'https://karen371.github.io/Prueba-Desarrollo-de-interfaces/karen-devfolio'
+  base: 'https://karen371.github.io/karen-devfolio/'
 })
