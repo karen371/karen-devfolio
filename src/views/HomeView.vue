@@ -44,8 +44,8 @@ export default {
     </div>
   </section >
   <!--Proyectos-->
-  <section class="contenedor__proyectos pb-4 pt-3" id="projects">
-    <div>
+  <section class="contenedor__proyectos pb-4" id="projects">
+    <div class="pt-3">
       <div class="container text-center mb-4 mt-4">
         <h2 class="display-4">Mis Proyectos</h2>
         <p class="lead">Aquí puedes ver algunos de los proyectos en los que he trabajado</p>
