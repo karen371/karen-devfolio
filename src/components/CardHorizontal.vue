@@ -30,7 +30,7 @@ export default {
             para aprender y seguir mejorando mis habilidades.
             Estoy abierta a colaborar en proyectos interesantes y seguir desarrollando mi carrera profesional.
           </p>
-          <a class="btn btn-lg button" href="https://drive.google.com/file/d/1EywOtVm9hs9k9UYFNa9Eyw8zbvxreowv/view?usp=sharing" target="_blank">Descargar CV</a>
+          <a class="btn btn-lg button" href="https://drive.google.com/file/d/1awDZj3CtZ-gV9U9Tux7rorsDFXySIksQ/view?usp=sharing" target="_blank">Descargar CV</a>
         </div>
       </div>
       <div class="col-md-6 d-flex justify-content-center align-items-center order-1 order-md-2">
