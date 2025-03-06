@@ -45,7 +45,8 @@ export default {
 .skill-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Esto asegura que la imagen llene el contenedor sin distorsionarse */
+  object-fit: contain; /* Esto asegura que la imagen llene el contenedor sin distorsionarse */
+  object-position: center;
   transition: transform 0.3s ease-in-out;
 }
 
