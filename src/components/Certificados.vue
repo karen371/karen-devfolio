@@ -15,9 +15,9 @@ export default {
         :src="imageSrc"
         :alt="nombre"
         class="card-img-top img-fluid"
-        style="object-fit: cover; height: 200px"
+        style="object-fit: cover;"
       />
-      <div class="card-body text-center">
+      <div class="overlay text-center">
         <h5 class="card-title">{{ nombre }}</h5>
       </div>
     </div>
@@ -28,9 +28,9 @@ export default {
 .card {
   width: 100%;
   max-width: 250px;
+  height: 300px;
   border-radius: 10px;
   overflow: hidden;
-  height: auto;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -40,11 +40,29 @@ export default {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 .card-img-top {
-  height: 150px;
   width: 100%;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center;
 }
-.card-title {
-  color: var(--vt-c-deep-blue);
+
+/* Capa de superposición */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Oculto inicialmente */
+  transition: opacity 0.3s ease-in-out;
+  color: #fff;
+}
+
+.card:hover .overlay {
+  opacity: 1; /* Muestra la superposición cuando la card está en hover */
 }
 </style>
