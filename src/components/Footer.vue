@@ -21,7 +21,7 @@ export default {
             <!-- Redes Sociales -->
             <div class="col-md-4 text-center mb-3">
               <h5>Redes Sociales</h5>
-              <a href="https://www.linkedin.com/in/karen-godoy-marin-7b86b9248/" target="_blank" class="mx-2">
+              <a href="https://www.linkedin.com/in/karen-emilly-godoy-marin-7b86b9248/" target="_blank" class="mx-2">
                 <i class="fa-brands fa-linkedin fa-2x"></i>
               </a>
               <a href="https://github.com/karen371" target="_blank" class="mx-2">
