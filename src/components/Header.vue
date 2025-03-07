@@ -27,9 +27,9 @@ export default {
 </header>
 </template>
 <style scoped>
-header {
+#inicio {
     width: 100%;
-    height: 500px; 
+    height: auto; 
     position: relative;
 }
 .contenido {

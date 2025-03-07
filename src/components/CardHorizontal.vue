@@ -16,19 +16,12 @@ export default {
       <div class="col-md-6 d-flex flex-column justify-content-center align-items-center order-2 order-md-1">
         <div class="card-body text-center mx-md-5 pt-5">
           <p class="card-text">
-            Soy Karen Godoy Marín, una persona apasionada por el diseño,
-            el desarrollo y la creatividad. Mi enfoque está en hacer realidad ideas a través de la
-            tecnología. Soy de La Serena, región de Coquimbo. Me dedico a varias áreas dentro de la
-            tecnología y el diseño, y el desarrollo de aplicaciones web y en mis tiempos libres a la
-            creación de amigurumis. Me encanta combinar mi creatividad con mis habilidades técnicas
-            para ofrecer soluciones visuales y funcionales.
-            Soy Ingeniera en Informática, lo que me ha permitido desarrollar una sólida
-            comprensión de la programación, el diseño y la gestión de proyectos tecnológicos.
-            He colaborado en el diseño y desarrollo de páginas web para mi empresa, donde he podido
-            aplicar mis conocimientos en programación y diseño para crear sitios funcionales y atractivos.
-            Aunque aún estoy en proceso de expandir mi experiencia profesional, tengo una gran disposición
-            para aprender y seguir mejorando mis habilidades.
-            Estoy abierta a colaborar en proyectos interesantes y seguir desarrollando mi carrera profesional.
+            Soy Karen Godoy Marín, Ingeniera en Informática con pasión por el diseño,
+            el desarrollo y la creatividad. Me especializo en el desarrollo de aplicaciones web
+            y en la creación de amigurumis en mi tiempo libre. Mi enfoque es combinar creatividad 
+            con habilidades técnicas para ofrecer soluciones visuales y funcionales. He colaborado 
+            en el diseño y desarrollo de páginas web en mi empresa, y aunque sigo ampliando mi 
+            experiencia, estoy siempre dispuesta a aprender y colaborar en proyectos interesantes.
           </p>
           <a class="btn btn-lg button" href="https://drive.google.com/file/d/1awDZj3CtZ-gV9U9Tux7rorsDFXySIksQ/view?usp=sharing" target="_blank">Descargar CV</a>
         </div>

@@ -36,7 +36,7 @@ export default {
 <template>
   <!-- Acerca de mí -->
   <section class="acerca-de-mi d-flex flex-column justify-content-center pb-3" id="about">
-    <div class="container text-center mb-4 mt-4">
+    <div class="container text-center mb-4 mt-2">
       <h2 class="display-4">Acerca de mí</h2>
     </div>
     <div class="container d-flex justify-content-center">
@@ -131,7 +131,6 @@ export default {
   max-width: 900px; 
   width: 100%; 
 }
-
 .acerca-de-mi {
   width: 100%;
   height: auto;
