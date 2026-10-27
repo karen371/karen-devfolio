@@ -1,60 +1,45 @@
 <script>
-import Navbar from './Navbar.vue';
-import Button from './Button.vue';
-import imgFondo from '../assets/img/web_developmen.svg'
+import Navbar from './Navbar.vue'
+import miFoto from '../assets/img/MiFoto.jpeg'
+
 export default {
-    components:{
-        Navbar,
-        Button
-    },
-    data(){
-        return{
-            imgFondo
-        }
+  components: {
+    Navbar
+  },
+  data() {
+    return {
+      miFoto
     }
+  }
 }
 </script>
+
 <template>
-<header id="inicio">
+  <header id="inicio" class="site-hero">
     <Navbar />
-    <div class="contenido">
-        <div class="description-container">
-            <h1>Karen Emilly Godoy Marín</h1>
-            <h3>Desarrolladora FrontEnd</h3>
-            <Button/>
+    <div class="hero-content">
+      <div class="hero-copy">
+        <h1 class="hero-title">
+          Desarrollo
+          <br>
+          <span>Frontend</span>
+        </h1>
+        <p class="hero-description">
+          Soy Karen Godoy Marín, ingeniera en informática. Diseño y desarrollo experiencias web
+          funcionales, cuidadas y pensadas para las personas.
+        </p>
+        <div class="hero-actions">
+          <a class="button-primary" href="#projects">Ver mis proyectos</a>
+          <a class="hero-secondary-link" href="#about">Conóceme</a>
         </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <img :src="miFoto" alt="Retrato de Karen Godoy Marín" class="hero-photo">
+      </div>
     </div>
-</header>
+    <div class="hero-bottom">
+      <span>Karen Emilly Godoy Marín</span>
+      <a href="#about">Desliza para descubrir <span aria-hidden="true">↓</span></a>
+    </div>
+  </header>
 </template>
-<style scoped>
-#inicio {
-    width: 100%;
-    height: auto; 
-    position: relative;
-}
-.contenido {
-    width: 100%;
-    height: 430px;
-    background-image: 
-    linear-gradient(rgba(244, 241, 244, 0.5), rgba(244, 241, 244, 0.5)), 
-    url('../assets/img/web_developmen.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: background-color 0.5s ease-in-out;
-}
-.description-container{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-h1,p{
-    color: var(--vt-c-deep-blue);
-}
-h3{
-    color: var(--vt-c-dark-purple);
-}
-</style>

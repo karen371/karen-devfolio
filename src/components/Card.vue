@@ -10,7 +10,7 @@ export default {
       required: true
     },
     description: {
-      type: String,
+      type: Array,
       required: true
     },
     git: {
@@ -21,99 +21,54 @@ export default {
       type: String,
       required: true
     }
+  },
+  methods: {
+    techLabel(iconClass) {
+      if (iconClass.includes('html5')) return 'HTML5'
+      if (iconClass.includes('css3')) return 'CSS3'
+      if (iconClass.includes('sass')) return 'Sass'
+      if (iconClass.includes('vuejs')) return 'Vue'
+      if (iconClass.includes('js')) return 'JavaScript'
+      return 'Tecnología'
+    }
   }
-};
+}
 </script>
+
 <template>
-  <div class="tarjeta col-sm-12 col-md-6 col-lg-4">
+  <article class="tarjeta">
     <div class="project-card">
-      <img :src="imgCard" alt="Imagen del proyecto" class="card-img">
+      <img
+        :src="imgCard"
+        :alt="`Vista previa del proyecto ${nombre}`"
+        class="card-img"
+        loading="lazy"
+        decoding="async"
+      >
       <div class="card-body">
-        <h5 class="card-title">{{ nombre }}</h5>
-        <div class="d-flex justify-content-center align-items-center gap-3 my-3 icono ">
-          <div v-for="(tech, index) in description" :key="index" >
-            <i :class="tech.icon"></i>
-          </div>
+        <h3 class="card-title">{{ nombre }}</h3>
+        <div class="project-tech" role="list" :aria-label="`Tecnologías de ${nombre}`">
+          <span
+            v-for="(tech, index) in description"
+            :key="index"
+            role="listitem"
+            :aria-label="techLabel(tech.icon)"
+            :title="techLabel(tech.icon)"
+          >
+            <i :class="tech.icon" aria-hidden="true"></i>
+          </span>
         </div>
-        <div class="d-flex justify-content-between align-items-center">
-          <a :href="git" class="text-secondary" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-github fa-lg me-1"></i> GitHub
+        <div class="project-links">
+          <a :href="git" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-github me-1" aria-hidden="true"></i>
+            Código
           </a>
-          <a :href="gitpage" class="text-secondary" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-github fa-lg me-1"></i> GitHub Pages
+          <a :href="gitpage" target="_blank" rel="noopener noreferrer">
+            Ver proyecto
+            <span aria-hidden="true">↗</span>
           </a>
         </div>
       </div>
     </div>
-  </div>
+  </article>
 </template>
-<style scoped>
-.tarjeta{
-  width: 280px;
-}
-.project-card {
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%;
-}
-.project-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.card-img {
-  width: 100%;
-  height: 180px; /* Ajustar altura para que sea más pequeña */
-  object-fit: cover;
-  border-bottom: 3px solid var(--vt-c-light-pink2);
-}
-
-.card-body {
-  padding: 1rem;
-  background-color: var(--vt-c-light-pink);
-  color: var(--vt-c-deep-blue);
-}
-
-.card-body h5 {
-  font-size: 1.125rem; /* Hacer el título más pequeño */
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.card-body p {
-  font-size: 0.875rem; /* Hacer la descripción un poco más pequeña */
-  margin-bottom: 1rem;
-}
-
-.card-body a {
-  font-size: 0.85rem;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.card-body a:hover {
-  color: var(--vt-c-soft-blue);
-}
-.icono {
-  color: var(--vt-c-dark-purple);
-  font-size: 1.5rem;
-}
-
-/* Responsividad */
-@media (max-width: 767px) {
-  .card-img {
-    height: 150px; /* Hacer la imagen más pequeña en pantallas pequeñas */
-  }
-
-  .card-body h5 {
-    font-size: 1rem; /* Hacer el título más pequeño */
-  }
-
-  .card-body p {
-    font-size: 0.8rem; /* Hacer la descripción más pequeña */
-  }
-  
-}
-</style>

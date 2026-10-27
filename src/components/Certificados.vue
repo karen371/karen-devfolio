@@ -1,68 +1,41 @@
 <script>
 export default {
   props: {
-    imageSrc: { type: String, required: true },
-    link: { type: String, required: true },
-    nombre: { type: String, required: true },
-  },
-};
+    imageSrc: {
+      type: String,
+      required: true
+    },
+    link: {
+      type: String,
+      required: true
+    },
+    nombre: {
+      type: String,
+      required: true
+    }
+  }
+}
 </script>
 
 <template>
-  <a :href="link" target="_blank" class="text-decoration-none">
-    <div class="card h-100 shadow-sm">
+  <component
+    :is="link ? 'a' : 'div'"
+    class="certificate-link"
+    :href="link || undefined"
+    :target="link ? '_blank' : undefined"
+    :rel="link ? 'noopener noreferrer' : undefined"
+    :aria-label="link ? `Ver certificado: ${nombre}` : undefined"
+    data-reveal
+  >
+    <article class="certificate-card">
       <img
         :src="imageSrc"
-        :alt="nombre"
-        class="card-img-top img-fluid"
-        style="object-fit: cover;"
-      />
-      <div class="overlay text-center">
-        <h5 class="card-title">{{ nombre }}</h5>
-      </div>
-    </div>
-  </a>
+        :alt="`Imagen del certificado ${nombre}`"
+        class="certificate-image"
+        loading="lazy"
+        decoding="async"
+      >
+      <h3 class="certificate-title">{{ nombre }}</h3>
+    </article>
+  </component>
 </template>
-
-<style scoped>
-.card {
-  width: 100%;
-  max-width: 250px;
-  height: 300px;
-  border-radius: 10px;
-  overflow: hidden;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-.card-img-top {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  object-position: center;
-}
-
-/* Capa de superposición */
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0; /* Oculto inicialmente */
-  transition: opacity 0.3s ease-in-out;
-  color: #fff;
-}
-
-.card:hover .overlay {
-  opacity: 1; /* Muestra la superposición cuando la card está en hover */
-}
-</style>
