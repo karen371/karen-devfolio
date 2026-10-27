@@ -1,19 +1,22 @@
 <template>
-  <div class="about-copy" data-reveal>
+  <div class="about-profile" data-reveal>
+    <div class="about-profile-top">
+      <span class="about-profile-number">KG / 001</span>
+      <span class="about-profile-label">PERFIL</span>
+    </div>
+    <h3>Mi forma de crear nace de entender primero el problema.</h3>
     <p>
-      Soy Karen Godoy Marín, ingeniera en informática con pasión por el diseño, el desarrollo y la
-      creatividad. Me especializo en aplicaciones web y disfruto crear amigurumis en mi tiempo
-      libre. Combino sensibilidad visual con habilidades técnicas para construir soluciones
-      funcionales. He colaborado en el diseño y desarrollo de páginas web, y sigo aprendiendo y
-      abierta a nuevos proyectos.
+      Soy Karen Godoy Marín, ingeniera en Informática y cofundadora de SysifosWeb.
+      Me interesa la intersección entre tecnología, experiencia de usuario y visión empresarial:
+      diseñar productos simples, funcionales y pensados para personas reales.
     </p>
-    <a
-      class="button-primary"
-      href="https://drive.google.com/file/d/1awDZj3CtZ-gV9U9Tux7rorsDFXySIksQ/view?usp=sharing"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Descargar CV
-    </a>
+    <p>
+      Mi curiosidad va más allá del código. Disfruto explorar ideas, aprender nuevas herramientas
+      y expresarme a través de proyectos creativos, incluso lejos de una pantalla.
+    </p>
+    <div class="about-profile-actions">
+      <a href="https://sysifosweb.cl" target="_blank" rel="noopener noreferrer" class="text-link">Conocer SysifosWeb <span aria-hidden="true">↗</span></a>
+      <a href="https://drive.google.com/file/d/1awDZj3CtZ-gV9U9Tux7rorsDFXySIksQ/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-link">Ver currículum <span aria-hidden="true">↗</span></a>
+    </div>
   </div>
 </template>
